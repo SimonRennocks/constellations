@@ -3,27 +3,29 @@ import { ListGroup, Container, Row, Col, Navbar, Nav, Card } from 'react-bootstr
 
 import PlayBar from './PlayBar';
 import TwoSideCard from './TwoSideCard';
-
-const cards = [{ name: "Orion", picture: "http://apod.nasa.gov/apod/image/0810/orion_gauvreau_big.jpg" }, { name: "Orion2", picture: "[Picture]" }, { name: "Orion3", picture: "[Picture]" }, { name: "Orion4", picture: "[Picture]" }]
+import constellations from '../data/constellations'
 
 function IndexCards() {
     return (
         <>
-       
-            <Navbar bg="dark">
-                <Nav.Item >
-                    <PlayBar />
-                </Nav.Item>
-            </Navbar>
             <Container>
-            <Row>
-                {cards.map(card => (
-                    <Col key={card.name} md={6}>
-                        <TwoSideCard name={card.name} picture={card.picture}/>
+                <Row>
+                    <Col xs={12} md={12}>
+                        <Navbar bg="dark">
+                            <Nav.Item >
+                                <PlayBar />
+                            </Nav.Item>
+                        </Navbar>
                     </Col>
-                ))}
-            </Row>
-        </Container>
+                </Row>
+                <Row>
+                    {constellations.map(card => (
+                        <Col key={card.name} xs={12} md={6}>
+                            <TwoSideCard name={card.name} picture={card.picture} />
+                        </Col>
+                    ))}
+                </Row>
+            </Container>
         </>
     );
 

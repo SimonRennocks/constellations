@@ -17,7 +17,7 @@ function PictureSide(props) {
 
         <div className={seen}>
             <Card bg="danger">
-                <Card.Body>
+                <Card.Body onClick={onClick.bind(null)}>
                     <Image src={picture} rounded onClick={onClick.bind(null)}/>
                 </Card.Body>
             </Card>
