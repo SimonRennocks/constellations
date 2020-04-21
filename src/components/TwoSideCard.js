@@ -4,23 +4,31 @@ import WordSide from './WordSide';
 import PictureSide from './PictureSide';
 
 function TwoSideCard(props) {
-    const [flip, SetFlip] = useState(true);
     const {
         name,
-        picture
+        picture,
+        invert
     } = props;
-    
+    console.log(invert);
+    const [showWord, setShowWord] = useState(false);
+   
+    console.log(showWord);
 
     function flipCard(e) {
         e.preventDefault();
-        SetFlip(!flip);
+        setShowWord(!showWord);
     }
+
+    let cardState = showWord;
+    if (invert){
+        cardState = !cardState;
+    } 
 
     return (
         <Card bg="dark">
             <Card.Body>
-                <WordSide name={name} show={flip} onClick={flipCard}/>
-                <PictureSide picture={picture} show={!flip} onClick={flipCard}/>
+                <WordSide name={name} show={cardState} onClick={flipCard}/>
+                <PictureSide picture={picture} show={!cardState} onClick={flipCard}/>
             </Card.Body>
         </Card>
     );

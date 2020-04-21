@@ -7,17 +7,19 @@ function WordSide(props) {
         show,
         onClick
     } = props;
-    let seen ="hide";
-    if (show){
-        seen ="show"
+
+    let seen = "hide";
+    if (show) {
+        seen = "show"
     }
+
     return (
-       
-    <div className={seen}>
-     <Card bg="danger">
-        <Card.Body onClick={onClick.bind(null)}>
-            <Card.Text onClick={onClick.bind(null)}>{name}</Card.Text>
-    </Card.Body>
+
+        <div className={seen}>
+            <Card bg="danger">
+                <Card.Body onClick={onClick.bind(null)}>
+                    <Card.Text onClick={onClick.bind(null)}>{name}</Card.Text>
+                </Card.Body>
             </Card></div>
     )
 }

@@ -9,7 +9,7 @@ function PictureSide(props) {
     } = props;
 
     let seen = "hide";
-    if (show) {
+    if (show ) {
         seen = "show"
     }
 
