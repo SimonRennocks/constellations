@@ -52,7 +52,7 @@ function IndexCards() {
                 </Row>
                 <Row>
                     {quadcons.map(card => (
-                        <Col key={card.name} xs={12} md={6}>
+                        <Col key={card.name} xs={12} md={6} xl={4}>
                             <TwoSideCard invert={invert} name={card.name} picture={card.picture} />
                         </Col>
                     ))}
