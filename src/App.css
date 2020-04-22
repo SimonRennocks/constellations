@@ -20,7 +20,7 @@ nav {
   margin:auto;
 }
 
-.container {padding:0px;   margin-left:12px; max-width:1920px;}
+.container {padding:0px;   margin-left:12px; max-width:1920px;background-color: #000;}
 
 .col-md-6,.col-md-12 {
   padding-left: 5px;
@@ -89,8 +89,15 @@ img {
 
 .rounded {width:100%}
 
+
+@media screen and (min-width: 766px) and (max-width: 1200px) {
+
+  .container {  margin-left:0px; background-color: #000;}
+  .row {margin-left:0px}
+}
+
 @media screen and (max-width: 765px) {
   .col-12 {padding-right:0px; margin-left:0px; width: 100%;}
-  .container {  margin-left:0px; background-color: #000;}
-  .row {margin-left:-5px}
+  .container {  margin-left:1px; background-color: #000;}
+  .row {margin-left:-4px}
 }
