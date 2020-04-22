@@ -11,7 +11,7 @@ function PlayBar(props) {
 
     return (
         <>
-         <Button variant="outline-danger" className={invertState} onClick={invertCardsClick.bind(this)}>Invert</Button>
+         <Button variant="outline-danger" className={invertState} onClick={invertCardsClick.bind(this)}>Flip</Button>
         {quadbtns.map(btn => (
             <Button key={btn.name} variant="outline-danger" className={btn.state} onClick={onClick.bind(this, parseInt(btn.name))}>
                 QN{btn.name}

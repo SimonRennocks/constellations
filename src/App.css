@@ -20,11 +20,12 @@ nav {
   margin:auto;
 }
 
-.container {padding:0px;  max-width:1920px;}
+.container {padding:0px;   margin-left:16px; max-width:1920px;}
 
 .col-md-6,.col-md-12 {
   padding-left: 5px;
   padding-right: 5px;
+
 }
 
 .card {
@@ -68,7 +69,9 @@ img {
 }
 
 .btn-outline-danger{
-  padding:10px 20px;
+  padding:10px 10px;
+  margin-left:5px;
+  margin-right:5px;
   color: rgb(196, 113, 113);
   border-color: #660909;
 }
@@ -86,6 +89,7 @@ img {
 
 .rounded {width:100%}
 
-@media screen and (max-width: 574px) {
-  .col-12 {padding-right:0px}
+@media screen and (max-width: 765px) {
+  .col-12 {padding-right:0px; margin-left:0px}
+  .container {  margin-left:12px; }
 }
