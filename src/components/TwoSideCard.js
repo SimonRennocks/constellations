@@ -1,5 +1,5 @@
 import React, { useState }  from "react";
-import { ListGroup, Container, Row, Col, Navbar, Nav, Card, Button } from 'react-bootstrap/'
+import { Card } from 'react-bootstrap/'
 import WordSide from './WordSide';
 import PictureSide from './PictureSide';
 
@@ -9,10 +9,8 @@ function TwoSideCard(props) {
         picture,
         invert
     } = props;
-    console.log(invert);
+    
     const [showWord, setShowWord] = useState(false);
-   
-    console.log(showWord);
 
     function flipCard(e) {
         e.preventDefault();

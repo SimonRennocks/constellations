@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ListGroup, Container, Row, Col, Navbar, Nav, Card } from 'react-bootstrap/'
+import { Container, Row, Col, Navbar, Nav } from 'react-bootstrap/'
 
 import PlayBar from './PlayBar';
 import TwoSideCard from './TwoSideCard';
@@ -12,8 +12,6 @@ function IndexCards() {
     const [invert, setInvert] = useState(false);
     const [invertState, setInvertState] = useState("");
     
-    
-
     let quadcons = constellations.filter(con => con.quadrant === quadrant);
 
     function quanClickHandler(id, e) {
@@ -21,8 +19,8 @@ function IndexCards() {
         setQuadrant(id);
 
         for(let i = 0; i < 4; i++)
-            defaultQBtns[i].state = ""
-        defaultQBtns[id-1].state = "active"
+            defaultQBtns[i].state = "";
+        defaultQBtns[id-1].state = "active";
         setQuadbtns(defaultQBtns);
         
     }
@@ -31,11 +29,10 @@ function IndexCards() {
         e.preventDefault();
         setInvert(!invert);
         if (invert){
-            setInvertState("active")
+            setInvertState("active");
         } else {
-            setInvertState("")
+            setInvertState("");
         }
-        
     }
     
     return (

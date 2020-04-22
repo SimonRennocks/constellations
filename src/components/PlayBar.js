@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { Nav, Button } from 'react-bootstrap';
+import React from "react";
+import { Button } from 'react-bootstrap';
 
 function PlayBar(props) {
     let {

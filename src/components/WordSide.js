@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { Card } from 'react-bootstrap/'
 
 function WordSide(props) {
@@ -14,7 +14,6 @@ function WordSide(props) {
     }
 
     return (
-
         <div className={seen}>
             <Card bg="danger">
                 <Card.Body onClick={onClick.bind(null)}>
